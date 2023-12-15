@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="stylesheet" href="styles.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Self-care Center</title>
+  </head>
+
+  <body>
+    <div class="div_general">
+      <h1>✨Self-Care Center✨</h1>
+      <h3>What type of message would you like to read?</h3>
+
+      <div class="div_options">
+        <form action="">
+          <div class="div_choix">
+            <div>
+              <input
+                type="radio"
+                name="Choix"
+                id="Affirmation"
+                value="Affirmation"
+                required
+              />
+              <label for="ChoixAffirmation">Affirmation</label> <br />
+            </div>
+
+            <div>
+              <input
+                type="radio"
+                name="Choix"
+                id="Mantra"
+                value="Mantra"
+                required
+              />
+              <label for="ChoixMantra">Mantra</label> <br />
+            </div>
+          </div>
+
+          <div class="div_button">
+            <button type="submit" id="button_Receive" onclick="recoverValue()">
+              Receive the message
+            </button>
+          </div>
+        </form>
+      </div>
+
+      <div class="ErrMessage">
+        <p></p>
+      </div>
+
+      <div class="div_messages">
+        <img src="assets/meditate.svg" alt="Icon représentant un Buddha" />
+      </div>
+      <div>
+        <button class="clearButton" onclick="clearMessage()">Clear</button>
+      </div>
+    </div>
+
+    <script type="text/javascript" src="main.js"></script>
+  </body>
+</html>

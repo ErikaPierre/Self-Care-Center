@@ -1,0 +1,66 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap");
+
+body {
+  background: linear-gradient(#134d71, #78a7c6, #f7e4bf);
+  font-family: "Quicksand", sans-serif;
+}
+
+h1 {
+  margin-bottom: 50px;
+}
+
+button {
+  font-family: "Quicksand", sans-serif;
+  color: #ffffff;
+  background-color: #134d71;
+  border-radius: 4px;
+  margin-top: 15px;
+}
+
+.div_general {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: #ffffff;
+}
+
+.div_options {
+  background-color: #ffffff;
+  border-radius: 8px;
+  color: black;
+  padding: 20px;
+  width: 300px;
+  margin-bottom: 50px;
+}
+
+.div_choix {
+  display: flex;
+  justify-content: space-between;
+}
+
+.div_button {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.ErrMessage p {
+  color: red;
+  font-weight: bold;
+}
+
+.div_messages {
+  background-color: #ffffff;
+  border-radius: 5px;
+  padding: 30px;
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  color: black;
+}
+
+.div_messages img {
+  height: 70px;
+}
