@@ -87,20 +87,25 @@ function recoverValue() {
     'input[name="Choix"]:checked'
   ).id;
 
-  if (selectedButtonRadio === "Affirmation") {
-    choosenValue = _choiceAffirmation;
+  if (selectedButtonRadio) {
+    if (selectedButtonRadio.id === "Affirmation") {
+      choosenValue = _choiceAffirmation;
+    } else {
+      choosenValue = _choiceMantra;
+    }
   } else {
-    choosenValue = _choiceMantra;
+    return ErrorMessage();
   }
+
   console.log("La valeur choisie est : " + choosenValue);
-  return choosenValue;
+
+  // return choosenValue;
 }
 
 //Ecouter le boutton
 const buttonReceive = document.getElementById("button_Receive");
 buttonReceive.addEventListener("click", function (e) {
   e.preventDefault();
-  ErrorMessage();
   recoverValue();
   showMessage(randomQuote());
 });
@@ -123,7 +128,7 @@ const ErrMessage = document.querySelector(".ErrMessage");
 function ErrorMessage() {
   let _choiceAffirmation = document.getElementById("Affirmation").value;
   let _choiceMantra = document.getElementById("Mantra").value;
-  if (_choiceAffirmation === false && _choiceMantra === false) {
+  if (!_choiceAffirmation && !_choiceMantra) {
     ErrMessage.innerHTML = "Veuillez sélectionner une option";
   }
 }
@@ -133,7 +138,7 @@ function randomQuote() {
   let selectedButtonRadio = document.querySelector(
     'input[name="Choix"]:checked'
   ).id;
-  if (selectedButtonRadio.checked) {
+  if (selectedButtonRadio === "Affirmation") {
     let randomIndexPa = Math.floor(Math.random() * positiveAffirmations.length);
     let randomValue = positiveAffirmations[randomIndexPa];
     return randomValue;
